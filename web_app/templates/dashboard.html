@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sara Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <h1>Welcome to Sara Dashboard</h1>
+    <div class="metrics">
+        <div class="metric">
+            <h2>Upcoming Tasks</h2>
+            <p>{{ upcoming_tasks }}</p>
+        </div>
+        <div class="metric">
+            <h2>Pending Emails</h2>
+            <p>{{ pending_emails }}</p>
+        </div>
+        <div class="metric">
+            <h2>Next Scheduled Appointments</h2>
+            <p>{{ next_appointments }}</p>
+        </div>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li><a href="{{ url_for('task_management') }}">Task Management</a></li>
+            <li><a href="{{ url_for('schedule_management') }}">Schedule Management</a></li>
+            <li><a href="{{ url_for('email_management') }}">Email Management</a></li>
+            <li><a href="{{ url_for('customization_settings') }}">Customization and Settings</a></li>
+            <li><a href="{{ url_for('user_authentication') }}">User Authentication</a></li>
+        </ul>
+    </div>
+</body>
+</html>

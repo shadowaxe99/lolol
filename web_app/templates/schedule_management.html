@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedule Management</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Schedule Management</h1>
+    <div class="calendar">
+        <!-- Calendar view goes here -->
+    </div>
+    <div class="actions">
+        <button class="btn" onclick="addAppointment()">Add Appointment</button>
+        <button class="btn" onclick="updateAppointment()">Update Appointment</button>
+        <button class="btn" onclick="deleteAppointment()">Delete Appointment</button>
+    </div>
+    <script src="{{ url_for('static', filename='schedule.js') }}"></script>
+</body>
+</html>
