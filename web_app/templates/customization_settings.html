@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sara Customization and Settings</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Sara Customization and Settings</h1>
+    <form action="{{ url_for('update_settings') }}" method="POST">
+        <h2>General Settings</h2>
+        <label for="reminder_frequency">Reminder Frequency:</label>
+        <select name="reminder_frequency" id="reminder_frequency">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+        <br>
+        <label for="email_format">Email Format:</label>
+        <select name="email_format" id="email_format">
+            <option value="plain_text">Plain Text</option>
+            <option value="html">HTML</option>
+        </select>
+        <br>
+        <label for="meeting_times">Preferred Meeting Times:</label>
+        <input type="text" name="meeting_times" id="meeting_times">
+        <br>
+        <h2>Linked Accounts</h2>
+        <label for="google_account">Google Account:</label>
+        <input type="text" name="google_account" id="google_account">
+        <br>
+        <label for="microsoft_account">Microsoft Account:</label>
+        <input type="text" name="microsoft_account" id="microsoft_account">
+        <br>
+        <label for="zoom_account">Zoom Account:</label>
+        <input type="text" name="zoom_account" id="zoom_account">
+        <br>
+        <input type="submit" value="Save Settings">
+    </form>
+</body>
+</html>

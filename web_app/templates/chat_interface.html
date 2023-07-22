@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sara - Chat Interface</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chat_interface.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Sara - AI Assistant</h1>
+        </div>
+        <div class="chat-messages">
+            <div class="message user-message">
+                <p>Hello, Sara!</p>
+            </div>
+            <div class="message assistant-message">
+                <p>Hi there! How can I assist you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message here...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/chat_interface.js') }}"></script>
+</body>
+</html>
